@@ -15,6 +15,7 @@ def possibilities(board):
 
 def random_place(board,player):
 	librex,librey=possibilities(board)
+	#print(librex,librey)
 	rx=np.random.choice(librex)
 	ry=np.random.choice(librey)
 	if board[rx][ry]==0:
@@ -38,28 +39,33 @@ def diag_win(board,player):
 	else:
 		return False
 
-
-
-np.random.seed(1)
-X=create_board()
-X[1][1]=1
-
-ganador=False
-
-while not ganador:
+ 
+def evaluate_board(board):
+	winner=0
 	for player in [1,2]:
-		posicion=random_place(X,player)
-		if player==1:
-			player=2
-		else:
-			player=1
-		if  row_win(X,player) or col_win(X,player) or diag_win(X,player):
-			print ("el ganador es player ", player)	
-			ganador=True
-			break
+		if col_win(board,player) or row_win(board,player) or diag_win(board,player):
+			winner=player
+	if np.all(board!=0) and winner == 0:
+		winner=-1
+
+	return winner
 	
 
+
+#np.random.seed(1)
+X=create_board()
+#X[1][1]=1
+
+ganador=0
+while ganador==0:
+	for player in [1,2]:
+		posicion=random_place(X,player)
+		ganador= evaluate_board(X) 
+		
+		if ganador!=0:
+			break
+	
+print("el ganador es ", ganador )
 print(X)
-# place(X,1,posicion)
 
 
