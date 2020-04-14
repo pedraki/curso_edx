@@ -51,21 +51,32 @@ def evaluate_board(board):
 	return winner
 	
 
+def play_game():
+	X=create_board()
+	X[1][1]=2
 
-#np.random.seed(1)
-X=create_board()
-#X[1][1]=1
-
-ganador=0
-while ganador==0:
-	for player in [1,2]:
-		posicion=random_place(X,player)
-		ganador= evaluate_board(X) 
+	ganador=0
+	while ganador==0:
+		for player in [1,2]:
+			posicion=random_place(X,player)
+			ganador= evaluate_board(X) 
 		
-		if ganador!=0:
-			break
+			if ganador!=0:
+				break
 	
-print("el ganador es ", ganador )
-print(X)
+	return(ganador,X)
+#np.random.seed(1)
+lista_ganadores=list()
+
+
+
+for k in range(10):
+	ganador,tablero=play_game()
+	lista_ganadores.append([ganador,tablero])
+
+for ele in lista_ganadores:
+	print (ele[1])
+#print(lista_ganadores)
+
 
 
