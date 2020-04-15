@@ -1,3 +1,4 @@
 https://xkcd.com/color/rgb/
 https://matplotlib.org/tutorials/colors/colors.html
 https://www.eumus.edu.uy/eme/ensenanza/electivas/python/CursoPython_clase11.html
+https://www.eumus.edu.uy/eme/ensenanza/electivas/python.html
