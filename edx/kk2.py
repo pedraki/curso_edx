@@ -1,4 +1,3 @@
-
 import numpy as np
 
 
@@ -15,9 +14,10 @@ def possibilities(board):
 
 def random_place(board,player):
 	librex,librey=possibilities(board)
-	#print(librex,librey)
+	
 	rx=np.random.choice(librex)
 	ry=np.random.choice(librey)
+	print(rx,ry)
 	if board[rx][ry]==0:
 		board[rx][ry]=player
 	
@@ -53,30 +53,11 @@ def evaluate_board(board):
 
 def play_game():
 	X=create_board()
-	X[1][1]=2
-
-	ganador=0
-	while ganador==0:
-		for player in [1,2]:
-			posicion=random_place(X,player)
-			ganador= evaluate_board(X) 
-		
-			if ganador!=0:
-				break
 	
-	return(ganador,X)
-#np.random.seed(1)
-lista_ganadores=list()
+	posicion=random_place(X,2)
+	print(posicion)
 
-
-
-for k in range(10):
-	ganador,tablero=play_game()
-	lista_ganadores.append([ganador,tablero])
-
-for ele in lista_ganadores:
-	print (ele[1])
-#print(lista_ganadores)
+play_game()
 
 
 
