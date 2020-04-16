@@ -1,39 +1,26 @@
 import numpy as np
-X=np.zeros((3,3))
-
-X[0][2]=1
-X[1][1]=1
-X[2][0]=1
+import matplotlib.pyplot as plt
 
 
-print(X)
-#fliplr= flip(X, axis=1)
-#print(np.fliplr(X))
-if np.all(np.diag(X,0)==1):
-	print("diagonal")
-
-if np.all(np.diag(np.fliplr(X),0)==1):
-	print ("diagonal inversa")
-
-filas=np.all(X==1,axis=1)
-colus=np.all(X==1,axis=0)
-
-if np.any(colus==True) or np.any(filas==True):
-	print("gano")
-print ("filas", filas)
-print ("columas",colus)
+x = np.linspace(0, 5, 10)
+y = x ** 2
 
 
 
-#for x in range(3):
+fig, axes = plt.subplots(nrows=1, ncols=2)
 
-#	print("Columna")
-#	print (X[:,x])
-#	print(np.all(X[:,x])==0)
+axes[1].plot(x, y, 'r')
+axes[1].plot(x, y, 'r')
+axes[1].set_xlabel('x')
+axes[1].set_ylabel('y')
+axes[1].set_title('title')
 
-#	print("fila")
-#	print (X[x])
-#	print(np.all(X[x])==0)
+axes[0].plot(x, y, 'r')
+axes[0].plot(x, y, 'r')
+axes[0].set_xlabel('x')
+axes[0].set_ylabel('y')
+axes[0].set_title('titulo')
 
-#print(np.all(X)==0)
- 
+
+
+plt.show()

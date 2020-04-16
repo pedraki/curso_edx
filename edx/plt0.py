@@ -3,7 +3,8 @@ import matplotlib.pyplot as plt
 a=np.linspace(0,10,20)
 b=a**2
 c=a**1.5
-grafi=plt.figure(facecolor="grey",edgecolor="blue",linewidth=2.0)
+grafi=plt.figure(facecolor="black",edgecolor="blue",linewidth=2.0)
+grafi.canvas.set_window_title('Número de albaranes')
 #plt.axis([-0.5,10.5,-5,120])
 
 axes = grafi.add_axes([0.1, 0.1, 0.8, 0.8])
