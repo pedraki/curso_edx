@@ -1,26 +1,8 @@
-import numpy as np
-import matplotlib.pyplot as plt
+number_list = [1, 2, 3,4]
+str_list = ['one', 'two', 'three']
 
+a=zip(number_list,str_list)
+#print(list(a))
 
-x = np.linspace(0, 5, 10)
-y = x ** 2
-
-
-
-fig, axes = plt.subplots(nrows=1, ncols=2)
-
-axes[1].plot(x, y, 'r')
-axes[1].plot(x, y, 'r')
-axes[1].set_xlabel('x')
-axes[1].set_ylabel('y')
-axes[1].set_title('title')
-
-axes[0].plot(x, y, 'r')
-axes[0].plot(x, y, 'r')
-axes[0].set_xlabel('x')
-axes[0].set_ylabel('y')
-axes[0].set_title('titulo')
-
-
-
-plt.show()
+for x,y in a:
+	print(x,y)
