@@ -6,6 +6,8 @@ response=requests.get(url)
 print(response)
 # contenido de la respuesta, en este caso la web
 #utf-8 en principio sobra es por defecto
+respuesta=response.content
+
 respuesta=response.content.decode('utf-8')
 busqueda='Did you know'
 #busca el texto dentro de lo que ha devuelto la pagina
