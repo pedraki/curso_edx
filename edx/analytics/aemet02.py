@@ -1,9 +1,12 @@
 
 import requests
 import json
+import os
+
+cur_dir=os.getcwd()
 
 
-with open('H:\\git\\curso_edx\\edx\\analytics\\aemet2.txt', 'r') as outfile:
+with open(cur_dir+'\\aemet2.txt', 'r') as outfile:
     Py_dato=json.load(outfile)
 
 #print(type(Py_dato))
