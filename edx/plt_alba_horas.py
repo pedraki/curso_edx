@@ -3,18 +3,18 @@ import cx_Oracle
 import matplotlib.pyplot as plt
 
 #horas=[7,8,9,10,11,12,13,14,15,16,17,18]
-colores=['ro-','bo-','gx-','yo--']
+colores=['ro-','bo-','gx-','yo--','ko--']
 d_years={}
 
 SQLACT="select ejercicio,num_resto, num_7,num_8,num_9,num_10,num_11,num_12,num_13,num_14,num_15,num_16,num_17,num_18 from talba_hora where ejercicio=to_number(to_char(sysdate,'YYYY'))"
+
 SQLANT="select EJERCICIO,num_resto,num_7,num_8,num_9,num_10,num_11,num_12,num_13,num_14,num_15,num_16,num_17,num_18 from talba_hora where ejercicio BETWEEN to_number(to_char(sysdate,'YYYY')) - 4" \
 		" AND to_number(to_char(sysdate,'YYYY')) -1 ORDER BY EJERCICIO"
+
 SQLIMP="select Ano,ENERO_venta,febrero_venta,marzo_venta,abril_venta,mayo_venta,junio_venta,julio_venta,agosto_venta,septiembre_venta,octubre_venta, noviembre_venta,diciembre_venta \
 		from estad_albaranes \
-		where  ano BETWEEN to_number(to_char(sysdate,'YYYY')) - 4 AND to_number(to_char(sysdate,'YYYY')) -1 \
+		where  ano BETWEEN to_number(to_char(sysdate,'YYYY')) - 4 AND to_number(to_char(sysdate,'YYYY')) \
 		 order by ano asc"
-		
-
 
 connection = cx_Oracle.connect('iturria1/iturria@linux')
 cursor = connection.cursor()
@@ -28,7 +28,7 @@ for row in cursor:
 cursor.execute(SQLANT)
 #fig=plt.figure(facecolor="black",edgecolor="blue",linewidth=2.0)
 #fig size tamaño de la ventana
-fig, axes = plt.subplots(facecolor="#d6fffa",nrows=2, ncols=2,figsize=(11, 8))
+fig, axes = plt.subplots(facecolor="#e6daa6",nrows=2, ncols=2,figsize=(11, 8))
 #ajuste de los graficos a la ventana
 fig.subplots_adjust(top=0.98)
 fig.subplots_adjust(left=0.06)
@@ -113,13 +113,14 @@ cursor.execute(SQLIMP)
 for row in cursor:
 	#d_years[row[0]]=sum(row[1:])
 	axes[1][1].plot(meses,row[1:],colores[i_color],linewidth=2,markersize=4,label=row[0])
-	axes[1][1].legend(loc=0,prop={'size': 8})
+	axes[1][1].legend(loc=0,prop={'size': 7})
 	i_color+=1
-	if i_color > 3:
+	if i_color > 4:
 		i_color=0
 axes[1][1].set_xlabel('importe x mes / año',size=8)
 axes[1][1].set_facecolor('xkcd:light grey')
 axes[1][1].grid(color='#040273', alpha=0.5, linestyle='dashed', linewidth=0.5)
+
 cursor.close()
 connection.close()
 

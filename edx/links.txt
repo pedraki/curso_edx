@@ -3,3 +3,5 @@ https://matplotlib.org/tutorials/colors/colors.html
 https://www.eumus.edu.uy/eme/ensenanza/electivas/python/CursoPython_clase11.html
 https://www.eumus.edu.uy/eme/ensenanza/electivas/python.html
 https://data-flair.training/blogs/python-data-cleansing/
+
+https://jakevdp.github.io/PythonDataScienceHandbook/04.09-text-and-annotation.html
