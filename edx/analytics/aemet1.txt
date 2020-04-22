@@ -399,7 +399,7 @@
     "latitud": "432928N",
     "provincia": "CANTABRIA",
     "altitud": "52",
-    "indicativo": "1111",
+    "indicativo": "1111X",
     "nombre": "SANTANDER",
     "indsinop": "08023",
     "longitud": "034802W"
@@ -408,7 +408,7 @@
     "latitud": "432928N",
     "provincia": "CANTABRIA",
     "altitud": "52",
-    "indicativo": "1111X",
+    "indicativo": "1111",
     "nombre": "SANTANDER",
     "indsinop": "08023",
     "longitud": "034802W"
