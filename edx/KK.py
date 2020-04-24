@@ -1,8 +1,10 @@
-number_list = [1, 2, 3,4]
-str_list = ['one', 'two', 'three']
+def grandes(str):
+	#lista2=[len(s) for s in str if len(s) > 2]
+	lista2=[s for s in str if len(s) > 2]
+	return lista2
 
-a=zip(number_list,str_list)
-#print(list(a))
 
-for x,y in a:
-	print(x,y)
+
+
+lista=['hola','pp','pedro']
+print (grandes(lista))
