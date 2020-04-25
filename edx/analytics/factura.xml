@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ns3:Facturae xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns3="http://www.facturae.es/Facturae/2009/v3.2/Facturae">
+<FileHeader>
+<SchemaVersion>3.2</SchemaVersion>
+<Modality>I</Modality>
+<InvoiceIssuerType>EM</InvoiceIssuerType>
+<Batch>
+<BatchIdentifier>B50915701302000292</BatchIdentifier>
+<InvoicesCount>1</InvoicesCount>
+<TotalInvoicesAmount>
+<TotalAmount> 000000013.47</TotalAmount>
+</TotalInvoicesAmount>
+<TotalOutstandingAmount>
+<TotalAmount> 000000013.47</TotalAmount>
+</TotalOutstandingAmount>
+<TotalExecutableAmount>
+<TotalAmount> 000000013.47</TotalAmount>
+</TotalExecutableAmount>
+<InvoiceCurrencyCode>EUR</InvoiceCurrencyCode>
+</Batch>
+</FileHeader>
+<Parties>
+<SellerParty>
+<TaxIdentification>
+<PersonTypeCode>J</PersonTypeCode>
+<ResidenceTypeCode>R</ResidenceTypeCode>
+<TaxIdentificationNumber>B50915701</TaxIdentificationNumber>
+</TaxIdentification>
+<LegalEntity>
+<CorporateName>ITURRIA INDUSTRIAL, S.L.</CorporateName>
+<RegistrationData>
+<Book>0</Book>
+<RegisterOfCompaniesLocation>GUIPUZKOA</RegisterOfCompaniesLocation>
+<Sheet>SS-24861</Sheet>
+<Folio>176</Folio>
+<Section></Section>
+<Volume>2141</Volume>
+</RegistrationData>
+<AddressInSpain>
+<Address>Poligono Arretxe-Ugalde, Ezurriki 6</Address>
+<PostCode>20305</PostCode>
+<Town>IRUN 20305</Town>
+<Province>GIPUZKOA</Province>
+<CountryCode>ESP</CountryCode>
+</AddressInSpain>
+<ContactDetails>
+<Telephone>943633188</Telephone>
+<ElectronicMail>almacen@iturria.net</ElectronicMail>
+<ContactPersons>MARIAN COCA</ContactPersons>
+</ContactDetails>
+</LegalEntity>
+</SellerParty>
+<BuyerParty>
+<TaxIdentification>
+<PersonTypeCode>J</PersonTypeCode>
+<ResidenceTypeCode>R</ResidenceTypeCode>
+<TaxIdentificationNumber>P2004900C</TaxIdentificationNumber>
+</TaxIdentification>
+<AdministrativeCentres>
+<AdministrativeCentre>
+<CentreCode>L01200454</CentreCode>
+<RoleTypeCode>01</RoleTypeCode>
+<AddressInSpain>
+<Address>PLAZA DE SAN JUAN 1</Address>
+<PostCode>20300</PostCode>
+<Town>IRUN</Town>
+<Province>GIPUZKOA</Province>
+<CountryCode>ESP</CountryCode>
+</AddressInSpain>
+</AdministrativeCentre>
+<AdministrativeCentre>
+<CentreCode>L01200454</CentreCode>
+<RoleTypeCode>02</RoleTypeCode>
+<AddressInSpain>
+<Address>PLAZA DE SAN JUAN 1</Address>
+<PostCode>20300</PostCode>
+<Town>IRUN</Town>
+<Province>GIPUZKOA</Province>
+<CountryCode>ESP</CountryCode>
+</AddressInSpain>
+</AdministrativeCentre>
+<AdministrativeCentre>
+<CentreCode>L01200454</CentreCode>
+<RoleTypeCode>03</RoleTypeCode>
+<AddressInSpain>
+<Address>PLAZA DE SAN JUAN 1</Address>
+<PostCode>20300</PostCode>
+<Town>IRUN</Town>
+<Province>GIPUZKOA</Province>
+<CountryCode>ESP</CountryCode>
+</AddressInSpain>
+</AdministrativeCentre>
+</AdministrativeCentres>
+<LegalEntity>
+<CorporateName>AYUNTAMIENTO DE IRUN</CorporateName>
+<RegistrationData/>
+<AddressInSpain>
+<Address>PLAZA DE SAN JUAN 1</Address>
+<PostCode>20300</PostCode>
+<Town>IRUN</Town>
+<Province>GIPUZKOA</Province>
+<CountryCode>ESP</CountryCode>
+</AddressInSpain>
+<ContactDetails/>
+</LegalEntity>
+</BuyerParty>
+</Parties>
+<Invoices>
+<Invoice>
+<InvoiceHeader>
+<InvoiceNumber>302000292</InvoiceNumber>
+<InvoiceSeriesCode/>
+<InvoiceDocumentType>FC</InvoiceDocumentType>
+<InvoiceClass>OO</InvoiceClass>
+</InvoiceHeader>
+<InvoiceIssueData>
+<IssueDate>2020-02-29</IssueDate>
+<InvoiceCurrencyCode>EUR</InvoiceCurrencyCode>
+<TaxCurrencyCode>EUR</TaxCurrencyCode>
+<LanguageName>es</LanguageName>
+</InvoiceIssueData>
+<TaxesOutputs>
+<Tax>
+<TaxTypeCode>01</TaxTypeCode>
+<TaxRate> 000000021.00</TaxRate>
+<TaxableBase>
+<TotalAmount> 000000011.13</TotalAmount>
+</TaxableBase>
+<TaxAmount>
+<TotalAmount> 000000002.34</TotalAmount>
+</TaxAmount>
+<EquivalenceSurchargeAmount>
+<TotalAmount> 000000000.00</TotalAmount>
+</EquivalenceSurchargeAmount>
+</Tax>
+</TaxesOutputs>
+<InvoiceTotals>
+<TotalGrossAmount> 000000011.13</TotalGrossAmount>
+<TotalGrossAmountBeforeTaxes> 000000011.13</TotalGrossAmountBeforeTaxes>
+<TotalTaxOutputs> 000000002.34</TotalTaxOutputs>
+<TotalTaxesWithheld> 000000000.00</TotalTaxesWithheld>
+<InvoiceTotal> 000000013.47</InvoiceTotal>
+<TotalOutstandingAmount> 000000013.47</TotalOutstandingAmount>
+<TotalExecutableAmount> 000000013.47</TotalExecutableAmount>
+</InvoiceTotals>
+<Items>
+<InvoiceLine>
+<ReceiverContractReference>INSTALACIONES DEPORT</ReceiverContractReference>
+<DeliveryNotesReferences>
+<DeliveryNote>
+<DeliveryNoteNumber>90381779 (INSTALACIONES DEPORT</DeliveryNoteNumber>
+<DeliveryNoteDate>2020-02-25</DeliveryNoteDate>
+</DeliveryNote>
+</DeliveryNotesReferences>
+<ItemDescription>SACO YESO PERLITA MANUAL ALBI  17 KGS</ItemDescription>
+<Quantity> 000000003.00</Quantity>
+<UnitOfMeasure>01</UnitOfMeasure>
+<UnitPriceWithoutTax> 000000003.710000</UnitPriceWithoutTax>
+<TotalCost> 000000011.130000</TotalCost>
+<DiscountsAndRebates>
+<Discount>
+<DiscountReason>Descuento</DiscountReason>
+<DiscountRate> 000000000.0000</DiscountRate>
+<DiscountAmount> 000000000.000000</DiscountAmount>
+</Discount>
+</DiscountsAndRebates>
+<GrossAmount> 000000011.130000</GrossAmount>
+<TaxesOutputs>
+<Tax>
+<TaxTypeCode>01</TaxTypeCode>
+<TaxRate> 000000021.00</TaxRate>
+<TaxableBase>
+<TotalAmount> 000000011.13</TotalAmount>
+</TaxableBase>
+<TaxAmount>
+<TotalAmount> 000000002.34</TotalAmount>
+</TaxAmount>
+<EquivalenceSurchargeAmount>
+<TotalAmount> 000000000.00</TotalAmount>
+</EquivalenceSurchargeAmount>
+</Tax>
+</TaxesOutputs>
+<AdditionalLineItemInformation/>
+</InvoiceLine>
+</Items>
+<PaymentDetails>
+<Installment>
+<InstallmentDueDate>2020-04-30</InstallmentDueDate>
+<InstallmentAmount> 000000013.47</InstallmentAmount>
+<PaymentMeans>04</PaymentMeans>
+<AccountToBeCredited>
+<IBAN>ES9421001700370200190785</IBAN>
+</AccountToBeCredited>
+</Installment>
+</PaymentDetails>
+<AdditionalData>
+<InvoiceAdditionalInformation>INSTALACIONES DEPORTIVAS PINTURA</InvoiceAdditionalInformation>
+</AdditionalData>
+</Invoice>
+</Invoices>
+</ns3:Facturae>
