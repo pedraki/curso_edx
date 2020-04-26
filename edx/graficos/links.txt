@@ -4,4 +4,6 @@ https://www.eumus.edu.uy/eme/ensenanza/electivas/python/CursoPython_clase11.html
 https://www.eumus.edu.uy/eme/ensenanza/electivas/python.html
 https://data-flair.training/blogs/python-data-cleansing/
 
+https://stackoverflow.com/questions/37360568/python-organisation-of-3-subplots-with-matplotlib
+
 https://jakevdp.github.io/PythonDataScienceHandbook/04.09-text-and-annotation.html
