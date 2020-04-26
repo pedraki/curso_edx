@@ -2,7 +2,7 @@ from  lxml import etree
 import os
 
 cur_dir=os.getcwd()
-fichero=cur_dir + '\\factura.xml'
+fichero=cur_dir + '\\prueba.xml'
 
 #pasa lee el fichero XML
 Fxml=etree.parse(fichero)
