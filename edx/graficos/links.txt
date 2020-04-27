@@ -10,3 +10,5 @@ https://jakevdp.github.io/PythonDataScienceHandbook/04.09-text-and-annotation.ht
 
 https://benalexkeen.com/bar-charts-in-matplotlib/
 https://cursosinformatica.ucm.es/trial/dataviz/
+
+kaggle
