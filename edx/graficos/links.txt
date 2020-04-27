@@ -7,3 +7,6 @@ https://data-flair.training/blogs/python-data-cleansing/
 https://stackoverflow.com/questions/37360568/python-organisation-of-3-subplots-with-matplotlib
 
 https://jakevdp.github.io/PythonDataScienceHandbook/04.09-text-and-annotation.html
+
+https://benalexkeen.com/bar-charts-in-matplotlib/
+https://cursosinformatica.ucm.es/trial/dataviz/
