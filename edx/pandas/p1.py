@@ -14,7 +14,8 @@ df2=albany_df.sort_index()
 
 #rolling (k) crea una ventana de k elementos para calcular
 #por ejemplo el promedio o la suma movil
-df2['AveragePrice'].rolling(25).mean().plot()
+#df2['AveragePrice'].rolling(25).mean().plot()
+df3=df2['AveragePrice'].rolling(25).mean()
 #df2['AveragePrice'].plot()
 #plt.show()
-print(df2['AveragePrice'].rolling(25).mean())
+print(df2['AveragePrice'].rolling(25).mean()) 
