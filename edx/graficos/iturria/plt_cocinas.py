@@ -82,11 +82,7 @@ for row in cursor:
 cursor.close()
 connection.close()
 
-print(d_years_v.keys())
-
-
-
-fig, axes = plt.subplots(facecolor="#e6daa6",nrows=1, ncols=2,figsize=(11, 8))
+fig, axes = plt.subplots(facecolor="#e6daa6",nrows=2, ncols=2,figsize=(11, 8))
 #ajuste de los graficos a la ventana
 fig.subplots_adjust(top=0.98)
 fig.subplots_adjust(left=0.06)
@@ -94,32 +90,44 @@ fig.canvas.set_window_title('Estadisticas cocinas')
 
 #Grafico 1 cocinas nunero
 lista_graph=list()
-lista_graph.append(axes[0].bar(lista_y, lista_h, color = "g", width = 0.25,label='H20'))
-lista_graph.append(axes[0].bar([v+0.25 for v in lista_y], lista_r, color = "#f8481c", width = 0.25,label='Resto'))
-lista_graph.append(axes[0].bar([v+0.50 for v in lista_y], lista_t, color = "#1e488f", width = 0.25,label='Total'))
+lista_graph.append(axes[0][0].bar(lista_y, lista_h, color = "g", width = 0.25,label='H20'))
+lista_graph.append(axes[0][0].bar([v+0.25 for v in lista_y], lista_r, color = "#f8481c", width = 0.25,label='Resto'))
+lista_graph.append(axes[0][0].bar([v+0.50 for v in lista_y], lista_t, color = "#1e488f", width = 0.25,label='Total'))
 
-axes[0].set_xticks([v+0.25 for  v in lista_y])
-axes[0].set_xticklabels([str(v) for v in lista_y])
+axes[0][0].set_xticks([v+0.25 for  v in lista_y])
+#rotataion rota en los grados que sea el label
+axes[0][0].set_xticklabels([str(v) for v in lista_y],rotation=30)
 
-valores_comunes(axes[0],'Cocinas facturadas (número)')
+valores_comunes(axes[0][0],'Cocinas facturadas (número)')
 for grafi in lista_graph:
-	autolabel(grafi,axes[0])
+	autolabel(grafi,axes[0][0])
 
 #grafico 2 cocinas importe
 lista_graph=list()
-lista_graph.append(axes[1].bar(lista_y, [round(v /1000,2) for v in lista_hi], 
+lista_graph.append(axes[0][1].bar(lista_y, [round(v /1000,2) for v in lista_hi], 
 	color = "g", width = 0.30,label='H20'))
-lista_graph.append(axes[1].bar([v+0.30 for v in lista_y], [round(v /1000,2)  for v in lista_ri], 
+lista_graph.append(axes[0][1].bar([v+0.30 for v in lista_y], [round(v /1000,2)  for v in lista_ri], 
 	color = "#f8481c", width = 0.30,label='Resto'))
-lista_graph.append(axes[1].bar([v+0.60 for v in lista_y], [round(v /1000,2) for v in lista_ti], 
+lista_graph.append(axes[0][1].bar([v+0.60 for v in lista_y], [round(v /1000,2) for v in lista_ti], 
 	color = "#1e488f", width = 0.30,label='Total'))
  
-axes[1].set_xticks([v+0.30 for  v in lista_y])
-axes[1].set_xticklabels([str(v) for v in lista_y])
+axes[0][1].set_xticks([v+0.30 for  v in lista_y])
+axes[0][1].set_xticklabels([str(v) for v in lista_y])
   
-valores_comunes(axes[1],'Cocinas facturadas (importe en miles de euros)')
+valores_comunes(axes[0][1],'Cocinas facturadas (importe en miles de euros)')
 for grafi in lista_graph:
-	autolabel(grafi,axes[1])
+	autolabel(grafi,axes[0][1])
 
+#grafico 3 cocinas numero
+axes[1][0].stackplot([str(v) for v in lista_y],lista_r,lista_h,colors=['#f8481c','g'])
+axes[1][0].plot([],[],color='#f8481c',label='Resto',linewidth=5)
+axes[1][0].plot([],[],color='g',label='H20',linewidth=5)
+valores_comunes(axes[1][0],'Cocinas facturadas (número)')
+
+#grafico 4 cocinas importe
+axes[1][1].stackplot([str(v) for v in lista_y],lista_ri,lista_hi,colors=['#f8481c','g'])
+axes[1][1].plot([],[],color='#f8481c',label='Resto',linewidth=5)
+axes[1][1].plot([],[],color='g',label='H20',linewidth=5)
+valores_comunes(axes[1][1],'Cocinas facturadas (importe)')
 
 plt.show()

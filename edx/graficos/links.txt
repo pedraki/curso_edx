@@ -10,5 +10,6 @@ https://jakevdp.github.io/PythonDataScienceHandbook/04.09-text-and-annotation.ht
 
 https://benalexkeen.com/bar-charts-in-matplotlib/
 https://cursosinformatica.ucm.es/trial/dataviz/
+https://medium.com/@kvnamipara/a-better-visualisation-of-pie-charts-by-matplotlib-935b7667d77f
 
 kaggle
